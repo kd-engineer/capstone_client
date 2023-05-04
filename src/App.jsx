@@ -1,12 +1,22 @@
 import React from 'react'
-import Hero from './views/Hero'
-import Demo from './views/Demo'
-import Welcome from './views/Welcome'
+import routes from './router'
+import { Route, Routes } from 'react-router-dom'
 
 const App = () => {
   return (
     <>
-      <Welcome />
+      <Routes>
+        {routes.map((route, index) => {
+          return (
+            <Route 
+              key={index} 
+              path={route.path} 
+              element={route.element} 
+              exact 
+            />
+          );
+        })}
+      </Routes>
     </>
   )
 }

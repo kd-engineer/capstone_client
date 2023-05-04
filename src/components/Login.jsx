@@ -117,7 +117,7 @@ const Login = () => {
                     value={password}
                     onChange={onChange}
                   />
-                  <div className='flex flex-row gap-1 -mt-4'>
+                  <div id='dp' className='flex flex-row gap-1 -mt-4'>
                     <ReactDatePicker />
                     <Select className='contact-form-text' placeholder='Gender'>
                       <option value='male'>Male</option>
