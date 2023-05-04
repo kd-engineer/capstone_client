@@ -1,5 +1,7 @@
 import React, { useState, useRef } from 'react'
-import { Drawer, DrawerBody, useDisclosure, Select } from '@chakra-ui/react'
+import { Drawer, DrawerBody, useDisclosure } from '@chakra-ui/react'
+import ReactDatePicker from '../components/ReactDatePicker';
+import { Select } from '@chakra-ui/react'
 
 
 const Login = () => {
@@ -27,6 +29,7 @@ const Login = () => {
         const { isOpen, onOpen, onClose } = useDisclosure()
         const btnRef = React.useRef()
 
+        const [value, setValue] = React.useState('1')
 
   return (
       <div id='login_container'>
@@ -55,10 +58,10 @@ const Login = () => {
                 onChange={onChange}
               />
               <div className='btn'>
-                <button type='submit' className='contact-form-btn'>Sign in</button>
+                <button type='submit' className='contact-form-btn font-bold'>Sign in</button>
               </div>
               <div className='flex flex-row justify-center'>
-                <h1 className='mt-5 pt-5 text-center'>Don't have an account? <span className='text-blue-400 cursor-pointer' ref={btnRef} onClick={onOpen}>Sign up</span></h1> 
+                <h1 className='mt-5 pt-5 text-center'>Don't have an account? <span className='text-DB font-bold cursor-pointer' ref={btnRef} onClick={onOpen}>Sign up</span></h1> 
               </div>
             </form>
           </div>
@@ -114,15 +117,17 @@ const Login = () => {
                     value={password}
                     onChange={onChange}
                   />
-                  <div id='birthdate'>
-                    <Select>
-                    <option value="1">1</option>
-                  </Select>`
+                  <div className='flex flex-row gap-1 -mt-4'>
+                    <ReactDatePicker />
+                    <Select className='contact-form-text' placeholder='Gender'>
+                      <option value='male'>Male</option>
+                      <option value='female'>Female</option>
+                    </Select>
                   </div>
                   <div className='btn'>
-                    <button type='submit' className='contact-form-btn'>Sign in</button>
+                    <button type='submit' className='contact-form-btn font-bold'>Sign up</button>
                   </div>
-                  <h1 className='mt-5 pt-5 text-center'>Already have an account? <span className='text-blue-400 cursor-pointer' onClick={onClose}>Sign in</span></h1>
+                  <h1 className='mt-5 pt-5 text-center'>Already have an account? <span className='text-DB font-bold cursor-pointer' onClick={onClose}>Sign in</span></h1>
                 </form>
               </div>
             </DrawerBody>
