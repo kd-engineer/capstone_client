@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react'
-import { Drawer, DrawerBody, DrawerFooter, DrawerHeader, DrawerOverlay, DrawerContent, DrawerCloseButton, useDisclosure } from '@chakra-ui/react'
+import { Drawer, DrawerBody, useDisclosure, Select } from '@chakra-ui/react'
 
 
 const Login = () => {
@@ -114,6 +114,11 @@ const Login = () => {
                     value={password}
                     onChange={onChange}
                   />
+                  <div id='birthdate'>
+                    <Select>
+                    <option value="1">1</option>
+                  </Select>`
+                  </div>
                   <div className='btn'>
                     <button type='submit' className='contact-form-btn'>Sign in</button>
                   </div>
