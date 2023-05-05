@@ -1,4 +1,4 @@
-import Welcome from "./views/Welcome";
+import Login from './views/Login'
 import Home from "./views/Home";
 import Profile from "./views/Profile";
 import Demo from './views/Demo';
@@ -6,11 +6,7 @@ import Demo from './views/Demo';
 const routes = [
     {
         path: "/login",
-        element: <Welcome />
-    },
-    {
-        path: "/login",
-        element: <Welcome />
+        element: <Login />
     },
     {
         path: "/",
