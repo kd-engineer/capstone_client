@@ -21,6 +21,7 @@ const Earth = () => {
 const EarthCanvas = () => {
     return (
         <Canvas
+            className="cursor-pointer"
             shadows
             frameloop="demand"
             gl={{ preserveDrawingBuffer: true }}

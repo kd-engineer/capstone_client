@@ -1,0 +1,32 @@
+/* <--- DatePicker ---> */
+.react-datepicker {
+    color: black!important;
+    font-weight: bold;
+    background: rgba(53,77,117,0.5)!important;
+    -webkit-backdrop-filter: blur(100px)!important;
+    backdrop-filter: blur(100px)!important;
+  }
+  
+  .react-datepicker__header {
+    background-color: rgba(39, 34, 60, 0.5)!important;
+    -webkit-backdrop-filter: blur(50px)!important;
+    backdrop-filter: blur(50px)!important;
+  }
+  
+  .react-datepicker__current-month, .react-datepicker__day-name  {
+    color: rgba(207,152,150,1)!important;
+  }
+  
+  .react-datepicker__day {
+    color: black!important;
+  }
+  
+  .react-datepicker__year-dropdown {
+    background: rgba(207,152,150,1)!important;
+    -webkit-backdrop-filter: blur(20px)!important;
+    backdrop-filter: blur(20px)!important;
+  }
+  
+  .react-datepicker__year-read-view--selected-year {
+    color: rgba(207,152,150,1)!important;
+  }

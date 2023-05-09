@@ -5,7 +5,7 @@ import Model from "../components/canvas/Model"
 const Demo = () => {
   return (
     <div className="AvatarBG">
-      <Model />
+      <AvatarCanvas />
     </div>
   )
 }

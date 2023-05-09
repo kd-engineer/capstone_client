@@ -1,5 +1,5 @@
-import EarthCanvas from '../components/canvas/Earth'
-import StarsCanvas from '../components/canvas/Stars'
+import EarthCanvas from './canvas/Earth'
+import StarsCanvas from './canvas/Stars'
 
 const Hero = () => {
   return (
