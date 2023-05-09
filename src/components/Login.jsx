@@ -56,10 +56,10 @@ const Login = () => {
                 onChange={onChange}
               />
               <div className='btn'>
-                <button type='submit' className='contact-form-btn font-bold'><Link to={"/home"}>Sign in</Link></button>
+                <button type='submit' className='contact-form-btn font-bold bg-black'><Link to={"/"}>Sign in</Link></button>
               </div>
               <div className='flex flex-row justify-center'>
-                <h1 className='mt-5 pt-5 text-center'>Don't have an account? <span className='text-DB font-bold cursor-pointer' > <Link to={"/register"}> Sign up</Link></span></h1> 
+                <h1 className='mt-5 pt-5 text-center'>Don't have an account? <span className='text-DB font-bold cursor-pointer' > <Link to={"/welcome/register"}> Sign up</Link></span></h1> 
               </div>
             </form>
           </div>

@@ -5,7 +5,7 @@ import '../../../styles/friends.css'
 const Friends = () => {
   return (
     <>
-    <NavigationBar />
+
     <ChakraProvider>
       <div id='content'>
         <div id='friends-nav'>

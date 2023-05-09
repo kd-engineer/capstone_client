@@ -1,7 +1,7 @@
 
 import ReactDatePicker from '../components/ReactDatePicker';
 import React, { useState, useRef } from 'react'
-import { Select } from '@chakra-ui/react'
+import { ChakraProvider, Select } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 import '../styles/register.css'
 
@@ -37,7 +37,7 @@ const Register = () => {
                 <form onSubmit={onSubmit} className='contact-form'>
                   <div id='full_name'>
                     <input 
-                      className='contact-form-name' 
+                      className='contact-form-namep' 
                       id='first_name'
                       type="text" 
                       placeholder='First Name'
@@ -47,7 +47,7 @@ const Register = () => {
                       onChange={onChange} 
                     />
                     <input 
-                      className='contact-form-name' 
+                      className='contact-form-namep' 
                       id='last_name'
                       type="text" 
                       placeholder='Last Name'
@@ -58,7 +58,7 @@ const Register = () => {
                     />
                   </div>
                   <input 
-                    className='contact-form-text' 
+                    className='contact-form-textp' 
                     id='email'
                     type="email" 
                     placeholder='Email'
@@ -68,7 +68,7 @@ const Register = () => {
                     onChange={onChange} 
                   />
                   <input 
-                    className='contact-form-text' 
+                    className='contact-form-textp' 
                     id='password'
                     type="password"  
                     placeholder='Password'
@@ -79,15 +79,17 @@ const Register = () => {
                   />
                   <div id='dp' className='flex flex-row gap-1 -mt-4'>
                     <ReactDatePicker />
-                    <Select className='contact-form-text' placeholder='Gender'>
+                    <ChakraProvider>
+                    <Select className='contact-form-textp' placeholder='Gender'>
                       <option value='male'>Male</option>
                       <option value='female'>Female</option>
                     </Select>
+                    </ChakraProvider>
                   </div>
                   <div className='btn'>
-                    <button type='submit' className='contact-form-btn font-bold'><Link to={"/"}>Sign up</Link></button>
+                    <button type='submit' className='contact-form-btnp font-bold bg-black'><Link to={"/"}>Sign up</Link></button>
                   </div>
-                  <h1 className='mt-5 pt-5 text-center'>Already have an account? <span className='text-DB font-bold cursor-pointer'> <Link to={"/login"}>Sign in</Link> </span></h1>
+                  <h1 className='mt-5 pt-5 text-center'>Already have an account? <span className='text-DP font-bold cursor-pointer'> <Link to={"/welcome/login"}>Sign in</Link> </span></h1>
                 </form>
               </div>
     </div>

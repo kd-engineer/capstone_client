@@ -9,7 +9,7 @@ const ReactDatePicker = () => {
   return (
     <>
       <DatePicker
-        className="contact-form-text"
+        className="contact-form-textp"
         todayButton=""
         selected={selectedDate}
         onChange={(date) => setSelectedDate(date)}

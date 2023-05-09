@@ -88,13 +88,12 @@ li {
     color: #fff;
     display: block;
     position: relative;
-    line-height: 0.8rem;
+    line-height: 1rem;
     perspective: 12.5rem;
     text-decoration: none;
     text-transform: uppercase;
     padding: 0.9375rem 1.875rem;
     transition: all 0.3s linear;
-    cursor: pointer;
     font-weight: bold;
     text-align: center;
 }
@@ -139,19 +138,19 @@ li {
     background-color:#00b3ff;
     text-shadow: 0 0 10px #00b3ff,
                  0 0 20px #00b3ff;
-    box-shadow: 0 0 10px  #00b3ff,
-                0 0 20px  #00b3ff;
+    box-shadow: 0 0 5px  #00b3ff,
+                0 0 10px  #00b3ff;
     background-size: 0.3125rem 0.3125rem;
 }
 
-.nav-link a.active .link-space {
+li a.active .link-space {
     transform: translateZ(-1.5625rem) rotateX(90deg);
     text-shadow: 0 0 5px #00b3ff,
                  0 0 10px #00b3ff;
     background-color:#00b3ff;
 }
 
-.nav-link a.active .back {
+li a.active .back {
     color: white;
     background-color:#00b3ff;
     text-shadow: 0 0 10px #00b3ff,

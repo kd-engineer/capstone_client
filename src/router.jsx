@@ -10,7 +10,7 @@ import Dashboard from "./views/Dashboard/Dashboard";
 
 const routes = [
     {
-        path: "*",
+        path: "/welcome/*",
         element: <Welcome />,
         children: [
             {
@@ -24,25 +24,31 @@ const routes = [
         ]
     },
     {
-        path: "/",
-        element: <Home />
-    },
-    {
-        path: "/friends",
-        element: <Friends />
-    },
-    {
-        path: "/group",
-        element: <Group />
-    },
-    {
-        path: "/profile",
-        element: <Profile />
-    },
-    {
-        path: "/demo",
-        element: <Demo />
-    } 
+        path: "/*",
+        element: <Dashboard />,
+        children: [
+            {
+                path: "/",
+                element: <Home />
+            },
+            {
+                path: "/friends",
+                element: <Friends />
+            },
+            {
+                path: "/group",
+                element: <Group />
+            },
+            {
+                path: "/profile",
+                element: <Profile />
+            },
+            {
+                path: "/demo",
+                element: <Demo />
+            } 
+        ]
+    }
 ]
 
 export default routes

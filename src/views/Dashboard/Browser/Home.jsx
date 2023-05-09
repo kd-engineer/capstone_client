@@ -12,7 +12,6 @@ import { BiLike } from 'react-icons/bi'
 const Home = () => {
   return (
     <>
-      <NavigationBar />
       <ChakraProvider>
         <div id='content' className="p-1">
           <div id="post-section">

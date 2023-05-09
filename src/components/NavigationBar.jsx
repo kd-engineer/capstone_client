@@ -16,32 +16,32 @@ const NavigationBar = () => {
         <div id='nav-views'>
           <nav>
             <li className='gap-1'>
-                <div className='nav-link'>
-                  <NavLink to={"/"}>HOME
+                <NavLink className={'nav-link'} to={"/"}>Home
+                  <div>
                     <span className='link-space'>
                       <span className='fare'>Home</span>
                       <span className='back'>Home</span>
-                    </span>
-                  </NavLink>
-                </div>
-                <div className='nav-link'>
-                  <NavLink to={"/friends"}>Friends
+                    </span>  
+                  </div>
+                </NavLink>
+                <NavLink className={'nav-link'} to={"/friends"}>Friends
+                  <div>
                     <span className='link-space'>
                       <span className='fare'>Friends</span>
                       <span className='back'>Friends</span>
                     </span>
-                  </NavLink>
-                </div>
-                <div className='nav-link'>
-                  <NavLink to={"/group"}>Group
+                  </div>
+                </NavLink>
+                <NavLink className={'nav-link'} to={"/group"}>Group
+                  <div>   
                     <span className='link-space'>
                       <span className='fare'>Group</span>
                       <span className='back'>Group</span>
                     </span>
-                  </NavLink>
-                </div>
+                  </div>
+                </NavLink>
             </li>
-            </nav>
+          </nav>
         </div>
       </div>
       <ChakraProvider>
@@ -73,9 +73,9 @@ const NavigationBar = () => {
                 />
               </MenuButton>
               <MenuList>
-                <MenuItem><Link to={"/profile"}>Profile</Link></MenuItem>
+              <Link to={"/profile"}><MenuItem>Profile</MenuItem></Link>
                 <MenuItem>Theme</MenuItem>
-                <MenuItem><Link to={"/login"}>Sign out</Link></MenuItem>
+                <Link to={"/welcome/login"}><MenuItem>Sign out</MenuItem></Link>
               </MenuList>
             </Menu>
           </div>

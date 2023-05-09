@@ -1,4 +1,3 @@
-import { ChakraProvider } from "@chakra-ui/react"
 import { Routes, Route } from 'react-router-dom'
 import NavigationBar from "../../components/NavigationBar"
 import '../../styles/dashboard.css'
@@ -8,11 +7,18 @@ const Dashboard = () => {
   return (
     <>
     <NavigationBar />
-    <ChakraProvider>
-      <div className="h-full w-full">
-        MAIN CONTENT
-      </div>
-    </ChakraProvider>
+    <Routes>
+        {routes[1].children.map((route, index) => {
+          return (
+            <Route 
+              key={index} 
+              path={route.path} 
+              element={route.element} 
+              exact 
+            />
+          );
+        })}
+      </Routes>
     </>
   )
 }
