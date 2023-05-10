@@ -1,42 +1,51 @@
-import React, { useState, useRef } from 'react'
-import { Drawer, DrawerBody, useDisclosure, Select, ChakraProvider } from '@chakra-ui/react'
-import { Link, useNavigate } from 'react-router-dom'
-import '../styles/login.css'
-import http from "../lib/http";
+import React, { useState, useRef } from 'react';
+import { Drawer, DrawerBody, useDisclosure, Select, ChakraProvider, Alert, AlertIcon, CloseButton } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
+import '../styles/login.css';
+import http from '../lib/http';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const initialForm = {
-    email: "",
-    password: "",
+    email: '',
+    password: '',
   };
 
   const [formState, setFormState] = useState(initialForm);
   const { email, password } = formState;
 
-  const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
 
   const onSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
+    setError('');
+
     try {
       const response = await http.post('/login', { email, password });
-      console.log(response.data); // do something with the response data
-      navigate('/');
+      if (response.status === 200) {
+        setIsLoading(false);
+        setFormState(initialForm);
+        navigate('/');
+      }
     } catch (error) {
-      console.error(error);
-      // handle the error here
+      setIsLoading(false);
+      setError('Invalid email or password');
     }
-  }
-  
-  const onChange = (e) => {
-    const { name, value} = e.target;
-
-    setFormState({...formState, [name]: value});
   };
 
-  const { isOpen, onOpen, onClose } = useDisclosure()
-  const btnRef = useRef()
+  const onChange = (e) => {
+    const { name, value } = e.target;
 
-  const [value, setValue] = useState('1')
+    setFormState({ ...formState, [name]: value });
+  };
+
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const btnRef = useRef();
+
+  const [value, setValue] = React.useState('1');
+  const navigate = useNavigate();
 
   return (
     <div id='login_container'>
@@ -44,37 +53,51 @@ const Login = () => {
         <div id='login'>
           <h1 className='mt-5 p-5 text-center font-bold text-3xl'>Sign in</h1>
           <form onSubmit={onSubmit} className='contact-form'>
-            <input 
-              className='contact-form-text' 
+            <input
+              className='contact-form-text'
               id='email'
-              type="email" 
+              type='email'
               placeholder='Email'
               name='email'
               required
               value={email}
-              onChange={onChange} 
+              onChange={onChange}
             />
-            <input 
-              className='contact-form-text' 
+            <input
+              className='contact-form-text'
               id='password'
-              type="password"  
+              type='password'
               placeholder='Password'
               name='password'
               required
               value={password}
               onChange={onChange}
             />
+            {error && (
+              <Alert status='error' fontSize='sm' mb={4}>
+                {error}
+                <CloseButton position='absolute' right='8px' top='8px' onClick={() => setError('')} />
+              </Alert>
+            )}
             <div className='btn'>
-              <button type='submit' className='contact-form-btn font-bold bg-black'>Sign in</button>
+              <button type='submit' className='contact-form-btn font-bold bg-black'>
+                {isLoading ? 'Signing in...' : 'Sign in'}
+              </button>
             </div>
             <div className='flex flex-row justify-center'>
-              <h1 className='mt-5 pt-5 text-center'>Don't have an account? <span className='text-DB font-bold cursor-pointer' > <Link to={"/welcome/register"}> Sign up</Link></span></h1> 
+              <h1 className='mt-5 pt-5 text-center'>
+                Don't have an account?{' '}
+                <span className='text-DB font-bold cursor-pointer'>
+                  {' '}
+                  <Link to={'/welcome/register'}> Sign up</Link>
+                </span>
+              </h1>
             </div>
           </form>
         </div>
       </div>
     </div>
-  )
-}
- 
-export default Login
+  );
+};
+
+export default Login;
