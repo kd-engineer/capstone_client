@@ -15,7 +15,7 @@ const ReactDatePicker = () => {
         onChange={(date) => setSelectedDate(date)}
         required
         showYearDropdown
-        dateFormatCalendar="MMMM"
+        dateFormat="yyyy/MM/dd"
         scrollableYearDropdown
         yearDropdownItemNumber={100}
         maxDate={new Date()}
