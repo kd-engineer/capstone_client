@@ -7,7 +7,7 @@ import Group from "./views/Dashboard/Browser/Group";
 import Profile from "./views/Dashboard/Browser/Profile";
 import Search from "./views/Dashboard/Browser/Search";
 import Dashboard from "./views/Dashboard/Dashboard";
-import AllFriends from "./components/Allfriends";
+import AllFriends from "./components/AllFriends";
 import FriendRequest from './components/FriendRequest';
 import Birthdays from "./components/Birthdays";
 import CUstomList from "./components/CUstomList";

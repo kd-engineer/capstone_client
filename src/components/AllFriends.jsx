@@ -31,9 +31,6 @@ const Allfriends = () => {
           </CardFooter>
         </Card>
 
-      
-          
-          
       </SimpleGrid>
     </ChakraProvider>
   )

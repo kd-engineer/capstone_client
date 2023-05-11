@@ -67,8 +67,6 @@ const FriendRequest = () => {
           </CardFooter>
         </Card>
       
-        
-        
       </SimpleGrid>
     </ChakraProvider>
   )
