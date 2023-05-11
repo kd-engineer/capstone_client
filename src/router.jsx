@@ -5,7 +5,7 @@ import Home from "./views/Dashboard/Browser/Home";
 import Friends from './views/Dashboard/Browser/Friends';
 import Group from "./views/Dashboard/Browser/Group";
 import Profile from "./views/Dashboard/Browser/Profile";
-import Demo from './views/Demo';
+import Search from "./views/Dashboard/Browser/Search";
 import Dashboard from "./views/Dashboard/Dashboard";
 import AllFriends from "./components/Allfriends";
 import FriendRequest from './components/FriendRequest';
@@ -66,8 +66,8 @@ const routes = [
                 element: <Profile />
             },
             {
-                path: "/demo",
-                element: <Demo />
+                path: "/search",
+                element: <Search />
             } 
         ]
     }

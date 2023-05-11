@@ -1,4 +1,3 @@
-import NavigationBar from '../../../components/NavigationBar'
 import { ChakraProvider, Text } from '@chakra-ui/react'
 import { NavLink, Routes, Route } from 'react-router-dom'
 import '../../../styles/friends.css'
