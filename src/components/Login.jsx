@@ -48,8 +48,6 @@ const Login = () => {
   const navigate = useNavigate();
 
   return (
-    <div id='login_container'>
-      <div>
         <div id='login'>
           <h1 className='mt-5 p-5 text-center font-bold text-3xl'>Sign in</h1>
           <form onSubmit={onSubmit} className='contact-form'>
@@ -97,8 +95,6 @@ const Login = () => {
             </div>
           </form>
         </div>
-      </div>
-    </div>
   );
 };
 

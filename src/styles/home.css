@@ -1,5 +1,5 @@
 #post-section {
-    width: 70vw;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: row;
@@ -10,14 +10,14 @@
 }
 
 #post-menu {
-    width: 30vw;
+    width: 30%;
     height: 100%;
     color: white;
     overflow-y: scroll;
 }
 
 #post-view {
-    width: 40vw;
+    width: 40%;
     height: 100%;
     color: white;
     overflow-y: scroll;

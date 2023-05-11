@@ -5,6 +5,7 @@
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(207,152,150,0.25);
+    padding: 1px;
   }
   
   .contact-form {
@@ -53,8 +54,8 @@
     border-radius: 10px!important;
   }
     
-    ::-webkit-input-placeholder {
-    color: white;
+  .contact-form-textp::-webkit-input-placeholder {
+    color: gray;
   }
     
   .contact-form-textp:focus {
@@ -91,6 +92,17 @@
     box-shadow: 0 0 10px  #ff1493,
                 0 0 20px  #ff1493;
   }
+
+  .css-7p9xsp {
+    border: transparent!important;
+    border-color: transparent!important;
+  }
+
+  input::file-selector-button {
+    background-color: #ff1493;
+    color: white;
+    border-radius: 5px;
+  }
   
   .text-DP {
     color: rgba(65, 13, 29, 0.85);
@@ -108,3 +120,4 @@
     box-shadow: 0 0 10px  #ff1493,
                 0 0 20px  #ff1493!important;
 }
+

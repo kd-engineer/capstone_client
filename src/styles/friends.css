@@ -3,6 +3,7 @@
     height: 100%;
     color: white;
     border: 1px solid white;
+    overflow: hidden;
 }
 
 #friends-content {
@@ -10,4 +11,27 @@
     height: 100%;
     color: white;
     border: 1px solid white;
+    overflow-y: scroll;
 }
+
+#friends-nav-list a div:hover {
+    color: white;
+    background-color:#00b3ff;
+    text-shadow: 0 0 10px #00b3ff,
+                 0 0 20px #00b3ff;
+    box-shadow: 0 0 10px  #00b3ff,
+                0 0 20px  #00b3ff;
+    background-size: 0.3125rem 0.3125rem;
+}
+
+#friends-nav-list a.active div {
+    color: white;
+    background-color:#00b3ff;
+    text-shadow: 0 0 10px #00b3ff,
+                 0 0 20px #00b3ff;
+    box-shadow: 0 0 10px  #00b3ff,
+                0 0 20px  #00b3ff;
+    background-size: 0.3125rem 0.3125rem;
+}
+
+

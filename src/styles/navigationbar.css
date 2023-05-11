@@ -185,3 +185,198 @@ li a.active .back {
     display: flex;
     justify-content: flex-end;
 }
+
+
+
+/*  <--- Responsive --->  */
+
+@media screen and (max-width: 991px) {
+    #navigationbar {
+        width: 100vw;
+        height: 60px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background: transparent;
+        position: fixed;
+        z-index: 10;
+    }
+    
+    #brand-logo {
+        width: 180px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        clip-path: polygon(0% 0%, 50% 0%, 97% 0%, 65.5% 100%, 0% 100%, 0% 53%);
+        color: white;
+        background: #1b1e38;
+        text-shadow: 0 0 10px #00b3ff,
+                     0 0 20px #00b3ff;
+        position: absolute;
+        left: 0;
+        z-index: 10;
+        font-weight: bold;
+    }
+    
+    #navbar {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: relative;
+        box-shadow: 0 0 5px  #00b3ff,
+                    0 0 10px  #00b3ff;
+    }
+    
+    #search-bar {
+        width: 250px;
+        position: absolute;
+        left: 160px;
+    }
+    
+    #search-bar > input {
+        color: #fff;
+        background: rgba(0,179,255,0.5);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(0,179,255,0.25);
+    }
+    
+    #search-bar > input:focus {
+        box-shadow: 0 0 5px  #00b3ff,
+        0 0 10px  #00b3ff;
+    }
+    
+    #nav-views {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        position: absolute;
+        color: #fff;
+    }
+    
+    nav {
+        top: 0;
+        left: 50%;
+        width: 600px;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        position: absolute;
+        transform: translate(-50%, -50%);
+    }
+    
+    li {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .nav-link {
+        width: 130px;
+        color: #fff;
+        display: block;
+        position: relative;
+        line-height: 1rem;
+        perspective: 12.5rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 0.9375rem 1.875rem;
+        transition: all 0.3s linear;
+        font-weight: bold;
+        text-align: center;
+    }
+    
+    .nav-link:not(.active):hover .link-space {
+        transform: translateZ(-1.5625rem) rotateX(90deg);
+    }
+    
+    .link-space {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        pointer-events: none;
+        transition: all 0.3s ease-out;
+        transform-style: preserve-3d;
+    }
+    
+    .fare {
+        transform: rotateX(0deg) translateZ(1.5625rem);
+    }
+    
+    .back {
+        transform: rotateX(-90deg) translateZ(1.5625rem);
+    }
+    
+    .fare, .back {
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        display: block;
+        position: absolute;
+        background: #444;
+        box-sizing: border-box;
+        padding: 0.9375rem 1.875rem;
+    }
+    
+    .nav-link:hover .back {
+        color: white;
+        background-color:#00b3ff;
+        text-shadow: 0 0 10px #00b3ff,
+                     0 0 20px #00b3ff;
+        box-shadow: 0 0 5px  #00b3ff,
+                    0 0 10px  #00b3ff;
+        background-size: 0.3125rem 0.3125rem;
+    }
+    
+    li a.active .link-space {
+        transform: translateZ(-1.5625rem) rotateX(90deg);
+        text-shadow: 0 0 5px #00b3ff,
+                     0 0 10px #00b3ff;
+        background-color:#00b3ff;
+    }
+    
+    li a.active .back {
+        color: white;
+        background-color:#00b3ff;
+        text-shadow: 0 0 10px #00b3ff,
+                     0 0 20px #00b3ff;
+        box-shadow: 0 0 10px  #00b3ff,
+                    0 0 20px  #00b3ff;
+        background-size: 0.3125rem 0.3125rem;
+    }
+    
+    #profile-nav {
+        width: 400px;
+        height: 60px;
+        right: 0;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        clip-path: polygon(13.7% 0%, 100.2% 0%, 100.2% 27%, 100.2% 101%, 56.1% 101%, 0% 101%);
+        z-index: 10;
+        position: absolute;
+        background: #1b1e38;
+    }
+    
+    #profile-container {
+        width: 450px;
+        position: absolute;
+        right: 0;
+        z-index: 10;
+    }
+    
+    #profile-menu {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+}

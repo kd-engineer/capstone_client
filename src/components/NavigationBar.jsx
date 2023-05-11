@@ -24,7 +24,7 @@ const NavigationBar = () => {
                     </span>  
                   </div>
                 </NavLink>
-                <NavLink className={'nav-link'} to={"/friends"}>Friends
+                <NavLink className={'nav-link'} to={"/friends/allfriends"}>Friends
                   <div>
                     <span className='link-space'>
                       <span className='fare'>Friends</span>

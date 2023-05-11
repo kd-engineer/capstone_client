@@ -7,6 +7,10 @@ import Group from "./views/Dashboard/Browser/Group";
 import Profile from "./views/Dashboard/Browser/Profile";
 import Demo from './views/Demo';
 import Dashboard from "./views/Dashboard/Dashboard";
+import AllFriends from "./components/Allfriends";
+import FriendRequest from './components/FriendRequest';
+import Birthdays from "./components/Birthdays";
+import CUstomList from "./components/CUstomList";
 
 const routes = [
     {
@@ -32,8 +36,26 @@ const routes = [
                 element: <Home />
             },
             {
-                path: "/friends",
-                element: <Friends />
+                path: "/friends/*",
+                element: <Friends />,
+                children: [
+                    {
+                        path: "/allfriends",
+                        element: <AllFriends />
+                    },
+                    {
+                        path: "/friendrequest",
+                        element: <FriendRequest />
+                    },
+                    {
+                        path: "/birthdays",
+                        element: <Birthdays />
+                    },
+                    {
+                        path: "/customlist",
+                        element: <CUstomList />
+                    }
+                ]
             },
             {
                 path: "/group",

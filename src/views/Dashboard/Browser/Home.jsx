@@ -14,8 +14,8 @@ const Home = () => {
     <>
       <ChakraProvider>
         <div id='content' className="p-1">
-          <div id="post-section">
-            <div id="post-menu" className="scrollable-div flex flex-col gap-y-2 px-3 pr-20">
+         <div id="post-section">
+           {/*  <div id="post-menu" className="scrollable-div flex flex-col gap-y-2 px-3 pr-20">
             <Card>
                 <CardHeader borderTopRadius="10" className="flex flex-col bg-gray-600">
                   <div className="flex flex-row">
@@ -68,7 +68,7 @@ const Home = () => {
                   </div>
                 </CardFooter>
               </Card> 
-            </div>
+  </div>*/}
 
 
             <div id="post-view" className="scrollable-div flex flex-col gap-y-4">
@@ -78,7 +78,7 @@ const Home = () => {
                     size='md'
                     src={kd} 
                   />
-                  <Input borderRadius={50} className="ml-2 mt-1" placeholder='Want to post something?' size='md'/>
+                  <Input borderRadius={50} className="ml-2 mt-1 text-white" placeholder='Want to post something?' size='md'/>
                 </Box>
                 <CardFooter borderBottomRadius={10} className="h-12 flex flex-row justify-center items-center bg-gray-800 text-white gap-10 border-t-2">
                   <div className="flex flex-row cursor-pointer">
@@ -252,13 +252,13 @@ const Home = () => {
                   </div>
                 </CardFooter>
               </Card>
-              
-              
             </div>
           </div>
-          <div id="chat-section" className="scrollable-div">
+
+          {/*<div id="chat-section" className="scrollable-div">
             CHAT
-          </div>
+</div>*/}
+
         </div>
       </ChakraProvider>
     </>
