@@ -10,7 +10,7 @@ import Dashboard from "./views/Dashboard/Dashboard";
 import AllFriends from "./components/AllFriends";
 import FriendRequest from './components/FriendRequest';
 import Birthdays from "./components/Birthdays";
-import CUstomList from "./components/CUstomList";
+import CUstomList from "./components/CustomList";
 
 const routes = [
     {
@@ -53,7 +53,7 @@ const routes = [
                     },
                     {
                         path: "/customlist",
-                        element: <CUstomList />
+                        element: <CustomList />
                     }
                 ]
             },
