@@ -41,11 +41,6 @@ const Login = () => {
     setFormState({ ...formState, [name]: value });
   };
 
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const btnRef = useRef();
-
-  const [value, setValue] = React.useState('1');
-  const navigate = useNavigate();
 
   return (
         <div id='login'>

@@ -3,7 +3,7 @@ import { ChakraProvider, Card, SimpleGrid, Text, CardFooter, Button, Image } fro
 import Lance from '../assets/avatar/lance.png'
 import Russel from '../assets/avatar/russel.png'
 
-const Allfriends = () => {
+const AllFriends = () => {
   return (
     <ChakraProvider>
       <SimpleGrid spacing={4} templateColumns='repeat(auto-fill, minmax(200px, 1fr))' className='p-10'>
@@ -36,4 +36,4 @@ const Allfriends = () => {
   )
 }
 
-export default Allfriends
+export default AllFriends

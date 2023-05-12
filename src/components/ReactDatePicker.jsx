@@ -20,7 +20,7 @@ const ReactDatePicker = () => {
         yearDropdownItemNumber={100}
         maxDate={new Date()}
         isClearable
-        placeholderText="Birth Date"
+        placeholderText="Birth Date"          
       />
     </>
   )

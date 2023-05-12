@@ -1,6 +1,6 @@
 import React from 'react'
 import '../styles/navigationbar.css'
-import { ChakraProvider, Avatar, Menu, MenuButton, MenuList, MenuItem } from '@chakra-ui/react'
+import { ChakraProvider, Avatar, Menu, MenuButton, MenuList, MenuItem, useMediaQuery } from '@chakra-ui/react'
 import { NavLink, Link } from 'react-router-dom'
 import kd from '../assets/avatar/kd.png'
 import bell from '../assets/bell.png'
@@ -44,8 +44,8 @@ const NavigationBar = () => {
           </nav>
         </div>
       </div>
+      <div id='profile-nav' className='text-center'></div>
       <ChakraProvider>
-        <div id='profile-nav' className='text-center'></div>
         <div id='profile-container' className='flex flex-row justify-end'>
           <div id='notification' className='absolute right-24 bg-gray-700 rounded-full border-2 border-black'>
             <Menu>

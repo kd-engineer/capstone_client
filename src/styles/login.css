@@ -53,8 +53,8 @@
     border-radius: 10px;
   }
     
-    ::-webkit-input-placeholder {
-    color: white;
+  .contact-form-text::-webkit-input-placeholder {
+    color: #718096;
   }
     
   .contact-form-text:focus {

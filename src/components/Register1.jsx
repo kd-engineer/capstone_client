@@ -7,7 +7,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "../styles/register.css";
 import http from "../lib/http";
 
-const Register = () => {
+const Register1 = () => {
   const navigate = useNavigate();
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -157,23 +157,18 @@ const Register = () => {
             />
             <Select
               id="gender"
-              className="contact-form-textp text-gray-500 pt-1"
+              className="contact-form-textp"
               placeholder="Gender"
               name="gender"
               required
               onChange={setGender}
             >
-              <option className="text-white" value="Boy">
-                Boy
-              </option>
-              <option className="text-white" value="Girl">
-                Girl
-              </option>
+              <option value="Boy">Boy</option>
+              <option value="Girl">Girl</option>
             </Select>
           </div>
           <Input
             className="contact-form-textp -mt-0"
-            _placeholder={{ opacity: 1, color: "gray.500" }}
             id="image"
             type="file"
             name="image"
@@ -199,4 +194,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default Register1;
