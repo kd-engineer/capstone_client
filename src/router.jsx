@@ -10,7 +10,7 @@ import Dashboard from "./views/Dashboard/Dashboard";
 import AllFriends from "./components/AllFriends";
 import FriendRequest from './components/FriendRequest';
 import Birthdays from "./components/Birthdays";
-import CUstomList from "./components/CustomList";
+import CustomList from "./components/CustomList";
 
 const routes = [
     {

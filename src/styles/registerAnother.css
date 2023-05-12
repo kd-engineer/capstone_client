@@ -1,0 +1,72 @@
+.registration-box {
+    background: rgba(207,152,150,1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(207,152,150,0.25);
+    height: 100vh;
+  }
+  
+  /* .registration-card {
+    background-color: rgba(207,152,150,1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px;
+  } */
+  
+  .registration-form-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .registration-form-input {
+    display: block;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  .registration-form-error {
+    color: #f00;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  .registration-form-radio {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .registration-form-control {
+    margin-bottom: 20px;
+  }
+  
+  .registration-form-button-group {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(207,152,150,1);
+    border-radius: 10px;
+  }
+  
+  .registration-form-button {
+    border: 0;
+    width: 100%;
+    background: black;
+    color: #00b3ff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  
+  .registration-form-button:hover {
+    color: white;
+      background: #00b3ff;
+      text-shadow: 0 0 10px #00b3ff,
+                   0 0 20px #00b3ff;
+      box-shadow: 0 0 10px  #00b3ff,
+                  0 0 20px  #00b3ff;
+  }
+  
