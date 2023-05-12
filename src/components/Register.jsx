@@ -184,7 +184,7 @@ const Register = () => {
               type="submit"
               className="contact-form-btnp font-bold bg-black"
             >
-              {/*<Link to={"/"}>Sign up</Link>*/}Sign up
+              Sign up
             </button>
           </div>
           <h1 className="mt-5 pt-5 text-center">
