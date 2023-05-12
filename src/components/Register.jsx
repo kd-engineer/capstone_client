@@ -1,11 +1,25 @@
+import { useEffect, useRef, useState } from "react";
+import '../styles/register.css';
 
-import ReactDatePicker from '../components/ReactDatePicker';
-import React, { useState, useRef } from 'react'
-import { ChakraProvider, Select, FormControl, Input } from '@chakra-ui/react'
-import { useNavigate, Link } from 'react-router-dom'
-import '../styles/register.css'
+import {
+  Box,
+  Card,
+  CardHeader,
+  CardBody,
+  Heading,
+  Button,
+  ButtonGroup,
+  Flex,
+  FormControl,
+  FormLabel,
+  FormErrorMessage,
+  Input,
+  Radio,
+  RadioGroup,
+  Stack,
+} from "@chakra-ui/react";
 import http from "../lib/http";
-
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -65,7 +79,7 @@ const Register = () => {
         navigate("/");
       }
     } catch (e) {
-      console.log("user", JSON.stringify(res.data.user));
+      console.log(e);
     }
   }
 
@@ -100,80 +114,209 @@ const Register = () => {
     );
   }
 
-
-
   return (
-    <ChakraProvider>
-      <div id='register'>
-                <h1 className='mt-5 p-5 text-center font-bold text-3xl'>Sign up</h1>
-                <form onSubmit={register} className='contact-form'>
-                  <div id='full_name'>
-                    <input 
-                      className='contact-form-namep' 
-                      id='first_name'
-                      type="text" 
-                      placeholder='First Name'
-                      name='first_name'
-                      required
-                      value={firstName}
-                      onChange={(e) => setFirstName(e.target.value)} 
-                    />
-                    <input 
-                      className='contact-form-namep' 
-                      id='last_name'
-                      type="text" 
-                      placeholder='Last Name'
-                      name='last_name'
-                      required
-                      value={lastName}
-                      onChange={(e) => setLastName(e.target.value)} 
-                    />
-                  </div>
-                  <input 
-                    className='contact-form-textp' 
-                    id='email'
-                    type="email" 
-                    placeholder='Email'
-                    name='email'
-                    required
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+    <Box className="registration-box"
+    bgRepeat='no-repeat'>
+      <Flex justify="center" align="center" h="100%">
+        <Card className="registration-card" w="500px">
+          <CardHeader align="center">
+            <Heading className='font-bold text-3xl' >Sign up</Heading>
+          </CardHeader>
+          <CardBody>
+            <form onSubmit={register}>
+              <FormControl
+                mb="1rem"
+                isRequired
+                isInvalid={error.firstName.length}
+              >
+                <FormLabel className="registration-form-label">
+                </FormLabel>
+                <Input
+                placeholder="First Name"
+                  type="text"
+                  value={firstName}
+                  onChange={(e) => setFirstName(e.target.value)}
+                  className="registration-form-input"
+                />
+                {error.firstName.map((err, index) => {
+                  return (
+                    <FormErrorMessage
+                      key={index}
+                      className="registration-form-error"
+                    >
+                      {err}
+                    </FormErrorMessage>
+                  );
+                })}
+              </FormControl>
+              <FormControl
+                mb="1rem"
+                isRequired
+                isInvalid={error.lastName.length}
+              >
+                <FormLabel className="registration-form-label"></FormLabel>
+                <Input
+                placeholder="Last Name"
+                  type="text"
+                  value={lastName}
+                  onChange={(e) => setLastName(e.target.value)}
+                  className="registration-form-input"
+                />
+                {error.lastName.map((err, index) => {
+                  return (
+                    <FormErrorMessage
+                      key={index}
+                      className="registration-form-error"
+                    >
+                      {err}
+                    </FormErrorMessage>
+                  );
+                })}
+              </FormControl>
+              <FormControl mb="1rem" isRequired isInvalid={false}>
+                <FormLabel className="registration-form-label">Gender</FormLabel>
+                <RadioGroup value={gender} onChange={setGender}>
+                  <Stack direction="row">
+                    <Radio value="Boy" className="registration-form-radio">
+                      Boy
+                    </Radio>
+                    <Radio value="Girl" className="registration-form-radio">
+                      Girl
+                    </Radio>
+                    <Radio value="Other" className="registration-form-radio">
+                      Other
+                    </Radio>
+                  </Stack>
+                </RadioGroup>
+                {error.gender.map((err, index) => {
+                  return (
+                    <FormErrorMessage
+                      key={index}
+                      className="registration-form-error"
+                    >
+                      {err}
+                    </FormErrorMessage>
+                  );
+                })}
+              </FormControl>
+              <FormControl
+                mb="1rem"
+                isRequired
+                isInvalid={error.birthDate.length}
+              >
+                <FormLabel className="registration-form-label">Birth Date</FormLabel>
+                <Input
+                  type="date"
+                  value={birthDate}
+                  onChange={(e) => setBirthDate(e.target.value)}
+                  className="registration-form-input"
+                />
+                {error.birthDate.map((err, index) => {
+                  return (
+                    <FormErrorMessage
+                      key={index}
+                      className="registration-form-error"
+                    >
+                      {err}
+                    </FormErrorMessage>
+                  );
+                })}
+              </FormControl>
+              <FormControl mb="1rem">
+                <FormLabel className="registration-form-label">
+                  Profile Picture
+                </FormLabel>
+                <Input
+                  type="file"
+                  onChange={(e) => setImage(e.target.files[0])}
+                  className="registration-form-input"
+                />
+              </FormControl>
+              <FormControl mb="1rem" isRequired isInvalid={error.email.length}>
+                <FormLabel className="registration-form-label">
+                </FormLabel>
+                <Input
+                placeholder="Email"
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="registration-form-input"
                   />
-                  <input 
-                    className='contact-form-textp' 
-                    id='password'
-                    type="password"  
-                    placeholder='Password'
-                    name='password'
-                    required
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
+                  {error.email.map((err, index) => {
+                  return (
+                  <FormErrorMessage key={index} className="registration-form-error">
+                  {err}
+                  </FormErrorMessage>
+                  );
+                  })}
+                  </FormControl>
+                  <FormControl
+                             mb="1rem"
+                             isRequired
+                             isInvalid={error.password.length}
+                             className="registration-form-control"
+                           >
+                  <FormLabel className="registration-form-label"></FormLabel>
+                  <Input
+                  placeholder="Password"
+                  type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  className="registration-form-input"
                   />
-                  <div id='dp' className='flex flex-row gap-1 -mt-4'>
-                    <ReactDatePicker
-                      type="date"
-                      value={birthDate}
-                      onChange={(e) => setBirthDate(e.target.value)} 
-                    />
-                    <Select value={gender} onChange={setGender} className='contact-form-textp' placeholder='Gender'>
-                      <option value='Boy'>Boy</option>
-                      <option value='Girl'>Girl</option>
-                    </Select>
-                  </div>
-                  <input
-                      className='contact-form-textp -mt-0'
-                      type="file"
-                      value={image}
-                      onChange={(e) => setImage(e.target.files[0])}
-                    />
-                  <div className='btn'>
-                    <button type='submit' className='contact-form-btnp font-bold bg-black'>{/*<Link to={"/"}>Sign up</Link>*/}Sign up</button>
-                  </div>
-                  <h1 className='mt-5 pt-5 text-center'>Already have an account? <span className='text-DP font-bold cursor-pointer'> <Link to={"/welcome/login"}>Sign in</Link> </span></h1>
-                </form>
-              </div>
-            </ChakraProvider>
-  )
-}
+                  {error.password.map((err, index) => {
+                  return (
+                  <FormErrorMessage key={index} className="registration-form-error">
+                  {err}
+                  </FormErrorMessage>
+                  );
+                  })}
+                  </FormControl>
+                  <FormControl
+                             mb="1rem"
+                             isRequired
+                             isInvalid={error.password.length}
+                             className="registration-form-control"
+                           >
+                  <FormLabel className="registration-form-label"></FormLabel>
+                  <Input
+                  placeholder="Password"
+                  type="password"
+                  value={passwordConfirmation}
+                  onChange={(e) => setPasswordConfirmation(e.target.value)}
+                  className="registration-form-input"
+                  />
+                  {error.password.map((err, index) => {
+                  return (
+                  <FormErrorMessage key={index} className="registration-form-error">
+                  {err}
+                  </FormErrorMessage>
+                  );
+                  })}
+                  </FormControl>
+                  <FormControl className="registration-form-control">
+                  <ButtonGroup
+                               display="flex"
+                               justifyContent="flex-end"
+                               className="registration-form-button-group"
+                             >
+                  <Button colorScheme="black" variant='solid' type="submit" className="registration-form-button">
+                  Register
+                  </Button>
+                  <Button
+                  onClick={() => navigate('/welcome/login')}
+                  className="registration-form-button"
+                  >
+                  Login
+                  </Button>
+                  </ButtonGroup>
+                  </FormControl>
+                  </form>
+                  </CardBody>
+                  </Card>
+                  </Flex>
+                  </Box>
+                  );
+};
 
-export default Register
+export default Register;

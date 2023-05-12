@@ -1,123 +1,71 @@
-#register {
-    height: 100vh;
-    width: 100%;
-    background: rgba(207,152,150,1);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(207,152,150,0.25);
-    padding: 1px;
-  }
-  
-  .contact-form {
-    padding: 25px;
-    height: 80%;
-  }
-  
-  #full_name {
-    display: flex;
-    flex-direction: row;
-    gap: 4px;
-  }
-  
-  .contact-form-namep {
-    display: flex;
-    width: 50%;
-    box-sizing: border-box;
-    border: 0;
-    background: rgba(65, 13, 29, 0.85);
-    padding: 10px 20px;
-    outline: none;
-    color: white;
-    transition: 0.5s;
-    border: 1px solid transparent;
-    border-radius: 10px;
-  }
-  
-  .contact-form-namep:focus {
-    box-shadow: 0 0 5px 4px #ff1493,
-                0 0 10px 4px #ff1493;
-  }
-  
-  .contact-form-textp {
-    display: block;
-    height: 50px!important;
-    width: 100%;
-    box-sizing: border-box;
-    margin: 15px 0;
-    border: 0;
-    background: rgba(65, 13, 29, 0.85)!important;
-    padding: 10px 20px;
-    outline: none;
-    color: white;
-    transition: 0.5s;
-    border: 1px solid transparent;
-    border-radius: 10px!important;
-  }
-    
-  .contact-form-textp::-webkit-input-placeholder {
-    color: gray;
-  }
-    
-  .contact-form-textp:focus {
-    box-shadow: 0 0 5px 4px #ff1493,
-                0 0 10px 4px #ff1493!important;
-  }
-    
-  textarea.contact-form-text {
-    resize: none;
-    height: 150px;
-    font-family: sans-serif;
-  }
-    
-  .btn {
-    display: flex;
-    justify-content: center;
-  }
-
-  .contact-form-btnp {
-    border: 0;
-    width: 100%;
-    background: black;
-    color: #ff1493;
-    padding: 10px 20px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.5s;
-  }
-  .contact-form-btnp:hover {
-    color: white;
-    background: #ff1493;
-    text-shadow: 0 0 10px #ff1493,
-                 0 0 20px #ff1493;
-    box-shadow: 0 0 10px  #ff1493,
-                0 0 20px  #ff1493;
-  }
-
-  .css-7p9xsp {
-    border: transparent!important;
-    border-color: transparent!important;
-  }
-
-  input::file-selector-button {
-    background-color: #ff1493;
-    color: white;
-    border-radius: 5px;
-  }
-  
-  .text-DP {
-    color: rgba(65, 13, 29, 0.85);
-  }
-
-  .css-7p9xsp {
-    --select-bg: transparent!important;
-  }
-
-  .css-7p9xsp .option:hover {
-    color: white!important;
-    background: #ff1493!important;
-    text-shadow: 0 0 10px #ff1493,
-                 0 0 20px #ff1493!important;
-    box-shadow: 0 0 10px  #ff1493,
-                0 0 20px  #ff1493!important;
+.registration-box {
+  background: rgba(207,152,150,1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(207,152,150,0.25);
+  height: 100vh;
 }
 
+/* .registration-card {
+  background-color: rgba(207,152,150,1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px;
+} */
+
+.registration-form-label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.registration-form-input {
+  display: block;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.registration-form-error {
+  color: #f00;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.registration-form-radio {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.registration-form-control {
+  margin-bottom: 20px;
+}
+
+.registration-form-button-group {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(207,152,150,1);
+  border-radius: 10px;
+}
+
+.registration-form-button {
+  border: 0;
+  width: 100%;
+  background: black;
+  color: #00b3ff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.registration-form-button:hover {
+  color: white;
+    background: #00b3ff;
+    text-shadow: 0 0 10px #00b3ff,
+                 0 0 20px #00b3ff;
+    box-shadow: 0 0 10px  #00b3ff,
+                0 0 20px  #00b3ff;
+}
