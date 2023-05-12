@@ -185,7 +185,7 @@ const Register1 = () => {
           <h1 className="mt-5 pt-5 text-center">
             Already have an account?
             <span className="text-DP font-bold cursor-pointer">
-              <Link to={"/welcome/login"}>Sign in</Link>
+              <Link to={"/welcome/login"}> Sign in</Link>
             </span>
           </h1>
         </form>

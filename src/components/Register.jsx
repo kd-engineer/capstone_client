@@ -157,18 +157,14 @@ const Register = () => {
             />
             <Select
               id="gender"
-              className="contact-form-textp text-gray-500 pt-1"
+              className="contact-form-textp pt-1"
               placeholder="Gender"
               name="gender"
               required
               onChange={setGender}
             >
-              <option className="text-white" value="Boy">
-                Boy
-              </option>
-              <option className="text-white" value="Girl">
-                Girl
-              </option>
+              <option value="Boy">Boy</option>
+              <option value="Girl">Girl</option>
             </Select>
           </div>
           <Input
@@ -190,7 +186,7 @@ const Register = () => {
           <h1 className="mt-5 pt-5 text-center">
             Already have an account?
             <span className="text-DP font-bold cursor-pointer">
-              <Link to={"/welcome/login"}>Sign in</Link>
+              <Link to={"/welcome/login"}> Sign in</Link>
             </span>
           </h1>
         </form>

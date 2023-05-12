@@ -54,7 +54,7 @@
 
 .contact-form-textp::-webkit-input-placeholder,
 .contact-form-namep::-webkit-input-placeholder {
-  color: #718096 !important;
+  color: white !important;
 }
 
 .contact-form-textp:focus {
