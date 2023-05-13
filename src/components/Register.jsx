@@ -148,31 +148,24 @@ const Register = () => {
           />
           <div id="dp" className="flex flex-row gap-1 -mt-4">
             <ReactDatePicker
-              id="birthdate"
               type="date"
-              name="birthdate"
-              required
               value={birthDate}
               onChange={(e) => setBirthDate(e.target.value)}
             />
             <Select
-              id="gender"
-              className="contact-form-textp pt-1"
-              placeholder="Gender"
-              name="gender"
-              required
+              value={gender}
               onChange={setGender}
+              className="contact-form-textp"
+              placeholder="Gender"
             >
               <option value="Boy">Boy</option>
               <option value="Girl">Girl</option>
             </Select>
           </div>
-          <Input
+          <input
             className="contact-form-textp -mt-0"
-            _placeholder={{ opacity: 1, color: "gray.500" }}
-            id="image"
             type="file"
-            name="image"
+            value={image}
             onChange={(e) => setImage(e.target.files[0])}
           />
           <div className="btn">
@@ -180,13 +173,14 @@ const Register = () => {
               type="submit"
               className="contact-form-btnp font-bold bg-black"
             >
-              Sign up
+              {/*<Link to={"/"}>Sign up</Link>*/}Sign up
             </button>
           </div>
           <h1 className="mt-5 pt-5 text-center">
-            Already have an account?
+            Already have an account?{" "}
             <span className="text-DP font-bold cursor-pointer">
-              <Link to={"/welcome/login"}> Sign in</Link>
+              {" "}
+              <Link to={"/welcome/login"}>Sign in</Link>{" "}
             </span>
           </h1>
         </form>
