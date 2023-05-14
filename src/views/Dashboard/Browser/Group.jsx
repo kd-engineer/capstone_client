@@ -1,8 +1,7 @@
 import { ChakraProvider, Text } from '@chakra-ui/react'
 import NavigationBar from "../../../components/NavigationBar"
 import React, { useState } from 'react';
-import '../../styles/group.css';
-
+import '../../../styles/group.css';
 
 const Group = () => {
   return (
