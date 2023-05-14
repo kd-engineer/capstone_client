@@ -1,0 +1,65 @@
+.profile-page {
+  font-family: Arial, sans-serif;
+  color: #fff;
+}
+
+header {
+  background-color: #192a56;
+  padding: 20px;
+}
+
+h1 {
+  margin: 0;
+  color: #fff;
+}
+
+.content {
+  padding: 20px;
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-picture {
+  margin-right: 20px;
+}
+
+.profile-picture img {
+  width: 200px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #4b7bec;
+}
+
+.profile-details h2 {
+  margin-top: 0;
+  color: #4b7bec;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.bio h2 {
+  margin-top: 0;
+  color: #4b7bec;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+footer {
+  background-color: #192a56;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+button {
+  background-color: #4b7bec;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #273c75;
+}
