@@ -313,7 +313,7 @@ const Register = () => {
             <div className="btn">
               <button
                 type="submit"
-                className="contact-form-btnp font-bold bg-black pb-10"
+                className="contact-form-btnp font-bold bg-black"
               >
                 {/*<Link to={"/"}>Sign up</Link>*/}Sign up
               </button>

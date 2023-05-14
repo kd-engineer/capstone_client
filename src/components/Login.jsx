@@ -94,10 +94,7 @@ const Login = () => {
           onChange={onChange}
         />
         <div className="btn">
-          <button
-            type="submit"
-            className="contact-form-btn font-bold bg-black pb-10"
-          >
+          <button type="submit" className="contact-form-btn font-bold bg-black">
             {isLoading ? "Signing in..." : "Sign in"}
           </button>
         </div>

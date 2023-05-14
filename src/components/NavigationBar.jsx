@@ -127,7 +127,7 @@ const NavigationBar = () => {
                   className="avatar-profile border-2"
                   size={{ base: "xs", md: "md" }}
                   src={
-                    "${import.meta.env.VITE_API}/images/${user.current.profile_pircture}"
+                    "${import.meta.env.VITE_API}/images/${user.current.profile_picture}"
                   }
                 />
               </MenuButton>
