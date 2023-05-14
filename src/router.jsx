@@ -66,7 +66,7 @@ const routes = [
         element: <Profile />,
       },
       {
-        path: "/search",
+        path: "/search/:searchTerm",
         element: <Search />,
       },
     ],

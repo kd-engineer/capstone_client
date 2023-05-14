@@ -1,39 +1,196 @@
-import React from 'react'
-import { ChakraProvider, Card, SimpleGrid, Text, CardFooter, Button, Image } from '@chakra-ui/react'
-import Lance from '../assets/avatar/lance.png'
-import Russel from '../assets/avatar/russel.png'
+import React from "react";
+import {
+  ChakraProvider,
+  SimpleGrid,
+  Text,
+  Box,
+  Button,
+  Image,
+} from "@chakra-ui/react";
+import Lance from "../assets/avatar/lance.png";
+import Russel from "../assets/avatar/russel.png";
 
 const AllFriends = () => {
   return (
     <ChakraProvider>
-      <SimpleGrid spacing={4} templateColumns='repeat(auto-fill, minmax(200px, 1fr))' className='p-10'>
-      <Card bg='gray.700' variant={'filled'} className='t-scale truncate'>
-        <Image 
-          h={'250px'}
-          objectFit='cover' 
-          src={Lance}> 
-        </Image>
-        <CardFooter className='flex flex-col'>
-          <Text className='font-bold text-white text-center'>Lance Dayap</Text>
-
-        </CardFooter>
-      </Card>
-
-        <Card bg='gray.700' variant={'filled'} className='t-scale truncate'>
-        <Image 
-          h={'250px'}
-          objectFit='cover' 
-          src={Russel}> 
-        </Image>
-          <CardFooter className='flex flex-col'>
-            <Text className='font-bold text-white text-center'>Russel King Cadiang</Text>
-            
-          </CardFooter>
-        </Card>
-
+      <SimpleGrid
+        spacingX="10px"
+        spacingY="20px"
+        minChildWidth="200px"
+        mx="auto"
+        className="flex justify-center p-10"
+      >
+        <Box
+          borderTopLeftRadius={20}
+          borderBottomRightRadius={20}
+          h={"300px"}
+          w={"200px"}
+          className="t-scale truncate"
+        >
+          <Image h={"200px"} objectFit="cover" src={Lance}></Image>
+          <Box
+            h={"100px"}
+            w={"200px"}
+            className="flex flex-col justify-center items-center text-white bg-gray-800"
+          >
+            <Text className="font-bold text-center items-center mb-3 ml-0 py-1">
+              Lance Dayap
+            </Text>
+            <Button colorScheme="blue" size="sm" className="text-white">
+              View Profile
+            </Button>
+          </Box>
+        </Box>
+        <Box
+          borderTopLeftRadius={20}
+          borderBottomRightRadius={20}
+          h={"300px"}
+          w={"200px"}
+          className="t-scale truncate"
+        >
+          <Image h={"200px"} objectFit="cover" src={Russel}></Image>
+          <Box
+            h={"100px"}
+            w={"200px"}
+            className="flex flex-col justify-center items-center text-white bg-gray-800"
+          >
+            <Text className="font-bold text-center items-center mb-3 ml-0 py-1">
+              Russel King Cadiang
+            </Text>
+            <Button colorScheme="blue" size="sm" className="text-white">
+              View Profile
+            </Button>
+          </Box>
+        </Box>
+        <Box
+          borderTopLeftRadius={20}
+          borderBottomRightRadius={20}
+          h={"300px"}
+          w={"200px"}
+          className="t-scale truncate"
+        >
+          <Image h={"200px"} objectFit="cover" src={Lance}></Image>
+          <Box
+            h={"100px"}
+            w={"200px"}
+            className="flex flex-col justify-center items-center text-white bg-gray-800"
+          >
+            <Text className="font-bold text-center items-center mb-3 ml-0 py-1">
+              Lance Dayap
+            </Text>
+            <Button colorScheme="blue" size="sm" className="text-white">
+              View Profile
+            </Button>
+          </Box>
+        </Box>
+        <Box
+          borderTopLeftRadius={20}
+          borderBottomRightRadius={20}
+          h={"300px"}
+          w={"200px"}
+          className="t-scale truncate"
+        >
+          <Image h={"200px"} objectFit="cover" src={Russel}></Image>
+          <Box
+            h={"100px"}
+            w={"200px"}
+            className="flex flex-col justify-center items-center text-white bg-gray-800"
+          >
+            <Text className="font-bold text-center items-center mb-3 ml-0 py-1">
+              Russel King Cadiang
+            </Text>
+            <Button colorScheme="blue" size="sm" className="text-white">
+              View Profile
+            </Button>
+          </Box>
+        </Box>
+        <Box
+          borderTopLeftRadius={20}
+          borderBottomRightRadius={20}
+          h={"300px"}
+          w={"200px"}
+          className="t-scale truncate"
+        >
+          <Image h={"200px"} objectFit="cover" src={Lance}></Image>
+          <Box
+            h={"100px"}
+            w={"200px"}
+            className="flex flex-col justify-center items-center text-white bg-gray-800"
+          >
+            <Text className="font-bold text-center items-center mb-3 ml-0 py-1">
+              Lance Dayap
+            </Text>
+            <Button colorScheme="blue" size="sm" className="text-white">
+              View Profile
+            </Button>
+          </Box>
+        </Box>
+        <Box
+          borderTopLeftRadius={20}
+          borderBottomRightRadius={20}
+          h={"300px"}
+          w={"200px"}
+          className="t-scale truncate"
+        >
+          <Image h={"200px"} objectFit="cover" src={Russel}></Image>
+          <Box
+            h={"100px"}
+            w={"200px"}
+            className="flex flex-col justify-center items-center text-white bg-gray-800"
+          >
+            <Text className="font-bold text-center items-center mb-3 ml-0 py-1">
+              Russel King Cadiang
+            </Text>
+            <Button colorScheme="blue" size="sm" className="text-white">
+              View Profile
+            </Button>
+          </Box>
+        </Box>
+        <Box
+          borderTopLeftRadius={20}
+          borderBottomRightRadius={20}
+          h={"300px"}
+          w={"200px"}
+          className="t-scale truncate"
+        >
+          <Image h={"200px"} objectFit="cover" src={Lance}></Image>
+          <Box
+            h={"100px"}
+            w={"200px"}
+            className="flex flex-col justify-center items-center text-white bg-gray-800"
+          >
+            <Text className="font-bold text-center items-center mb-3 ml-0 py-1">
+              Lance Dayap
+            </Text>
+            <Button colorScheme="blue" size="sm" className="text-white">
+              View Profile
+            </Button>
+          </Box>
+        </Box>
+        <Box
+          borderTopLeftRadius={20}
+          borderBottomRightRadius={20}
+          h={"300px"}
+          w={"200px"}
+          className="t-scale truncate"
+        >
+          <Image h={"200px"} objectFit="cover" src={Russel}></Image>
+          <Box
+            h={"100px"}
+            w={"200px"}
+            className="flex flex-col justify-center items-center text-white bg-gray-800"
+          >
+            <Text className="font-bold text-center items-center mb-3 ml-0 py-1">
+              Russel King Cadiang
+            </Text>
+            <Button colorScheme="blue" size="sm" className="text-white">
+              View Profile
+            </Button>
+          </Box>
+        </Box>
       </SimpleGrid>
     </ChakraProvider>
-  )
-}
+  );
+};
 
-export default AllFriends
+export default AllFriends;

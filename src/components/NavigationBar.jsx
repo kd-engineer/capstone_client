@@ -113,13 +113,15 @@ const NavigationBar = () => {
         </div>
         <div id="navbar">
           <div id="search-bar">
-            <input
-              className="w-full rounded-full p-1 pl-4"
-              type="text"
-              placeholder="Search"
-              value={searchTerm}
-              onChange={(e) => setSearch(e.target.value)}
-            />
+            <form onSubmit={submit}>
+              <input
+                className="w-full rounded-full p-1 pl-4"
+                type="text"
+                placeholder="Search"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+              />
+            </form>
           </div>
           <div id="nav-views">
             <nav>

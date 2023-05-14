@@ -18,7 +18,12 @@
   position: absolute;
   bottom: 0;
   background: #1b1212;
-  padding-top: 60px;
+  padding-top: 70px;
+}
+
+#search-content {
+  width: 100%;
+  overflow-y: scroll;
 }
 
 .AvatarBG {

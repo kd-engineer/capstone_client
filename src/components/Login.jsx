@@ -56,21 +56,24 @@ const Login = () => {
       <h1 className="mt-5 p-5 text-center font-bold text-3xl">Sign in</h1>
       <form onSubmit={onSubmit} className="contact-form">
         {error && (
-          <Alert
-            borderRadius={10}
-            color="red.500"
-            status="error"
-            fontSize="sm"
-            mb={4}
-          >
-            {error}
-            <CloseButton
-              position="absolute"
-              right="8px"
-              top="8px"
-              onClick={() => setError("")}
-            />
-          </Alert>
+          <ChakraProvider>
+            <Alert
+              height={10}
+              borderRadius={10}
+              color="red.500"
+              status="error"
+              fontSize="sm"
+              mb={4}
+            >
+              {error}
+              <CloseButton
+                position="absolute"
+                right="8px"
+                top="5px"
+                onClick={() => setError("")}
+              />
+            </Alert>
+          </ChakraProvider>
         )}
         <input
           className="contact-form-text"

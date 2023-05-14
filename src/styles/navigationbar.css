@@ -40,7 +40,7 @@
   left: 160px;
 }
 
-#search-bar > input {
+#search-bar input {
   color: #fff;
   background: rgba(0, 179, 255, 0.5);
   -webkit-backdrop-filter: blur(10px);
@@ -48,7 +48,7 @@
   border: 1px solid rgba(0, 179, 255, 0.25);
 }
 
-#search-bar > input:focus {
+#search-bar input:focus {
   box-shadow: 0 0 5px #00b3ff, 0 0 10px #00b3ff;
 }
 

@@ -8,6 +8,7 @@ import {
   ButtonGroup,
   Button,
   Image,
+  Box,
 } from "@chakra-ui/react";
 import Stephen from "../assets/stephen.jpg";
 import JL from "../assets/avatar/jl.png";
@@ -18,19 +19,26 @@ const FriendRequest = () => {
   return (
     <ChakraProvider>
       <SimpleGrid
-        spacing={4}
-        templateColumns="repeat(auto-fill, minmax(200px, 1fr))"
-        className="p-10"
+        spacingX="10px"
+        spacingY="20px"
+        minChildWidth="200px"
+        mx="auto"
+        className="flex justify-center p-10"
       >
-        <Card
+        <Box
+          borderTopLeftRadius={20}
+          borderBottomRightRadius={20}
           h={"300px"}
-          borderRadius={5}
-          variant={"filled"}
+          w={"200px"}
           className="t-scale truncate"
         >
           <Image h={"200px"} objectFit="cover" src={Stephen}></Image>
-          <CardFooter className="flex flex-col justify-center text-white bg-gray-800">
-            <Text className="font-bold text-center mb-3 ml-0 py-1">
+          <Box
+            h={"100px"}
+            w={"200px"}
+            className="flex flex-col justify-center items-center text-white bg-gray-800"
+          >
+            <Text className="font-bold text-center items-center mb-3 ml-0 py-1">
               Stephen Strange
             </Text>
             <ButtonGroup className="justify-center">
@@ -41,19 +49,23 @@ const FriendRequest = () => {
                 Decline
               </Button>
             </ButtonGroup>
-          </CardFooter>
-        </Card>
-
-        <Card
+          </Box>
+        </Box>
+        <Box
+          borderTopLeftRadius={20}
+          borderBottomRightRadius={20}
           h={"300px"}
-          borderRadius={5}
-          variant={"filled"}
+          w={"200px"}
           className="t-scale truncate"
         >
-          <Image h={"200px"} objectFit="cover" src={JL}></Image>
-          <CardFooter className="flex flex-col justify-center text-white bg-gray-800">
-            <Text className="font-bold text-center mb-3 ml-0 py-1">
-              JL Toreliza
+          <Image h={"200px"} objectFit="cover" src={Stephen}></Image>
+          <Box
+            h={"100px"}
+            w={"200px"}
+            className="flex flex-col justify-center items-center text-white bg-gray-800"
+          >
+            <Text className="font-bold text-center items-center mb-3 ml-0 py-1">
+              Stephen Strange
             </Text>
             <ButtonGroup className="justify-center">
               <Button colorScheme="blue" size="sm" className="text-white">
@@ -63,19 +75,23 @@ const FriendRequest = () => {
                 Decline
               </Button>
             </ButtonGroup>
-          </CardFooter>
-        </Card>
-
-        <Card
+          </Box>
+        </Box>
+        <Box
+          borderTopLeftRadius={20}
+          borderBottomRightRadius={20}
           h={"300px"}
-          borderRadius={5}
-          variant={"filled"}
+          w={"200px"}
           className="t-scale truncate"
         >
-          <Image h={"200px"} objectFit="cover" src={Aiah}></Image>
-          <CardFooter className="flex flex-col justify-center text-white bg-gray-800">
-            <Text className="font-bold text-center mb-3 ml-0 py-1">
-              Aiah Arceta
+          <Image h={"200px"} objectFit="cover" src={Stephen}></Image>
+          <Box
+            h={"100px"}
+            w={"200px"}
+            className="flex flex-col justify-center items-center text-white bg-gray-800"
+          >
+            <Text className="font-bold text-center items-center mb-3 ml-0 py-1">
+              Stephen Strange
             </Text>
             <ButtonGroup className="justify-center">
               <Button colorScheme="blue" size="sm" className="text-white">
@@ -85,8 +101,34 @@ const FriendRequest = () => {
                 Decline
               </Button>
             </ButtonGroup>
-          </CardFooter>
-        </Card>
+          </Box>
+        </Box>
+        <Box
+          borderTopLeftRadius={20}
+          borderBottomRightRadius={20}
+          h={"300px"}
+          w={"200px"}
+          className="t-scale truncate"
+        >
+          <Image h={"200px"} objectFit="cover" src={Stephen}></Image>
+          <Box
+            h={"100px"}
+            w={"200px"}
+            className="flex flex-col justify-center items-center text-white bg-gray-800"
+          >
+            <Text className="font-bold text-center items-center mb-3 ml-0 py-1">
+              Stephen Strange
+            </Text>
+            <ButtonGroup className="justify-center">
+              <Button colorScheme="blue" size="sm" className="text-white">
+                Accept
+              </Button>
+              <Button colorScheme="red" size="sm">
+                Decline
+              </Button>
+            </ButtonGroup>
+          </Box>
+        </Box>
       </SimpleGrid>
     </ChakraProvider>
   );
