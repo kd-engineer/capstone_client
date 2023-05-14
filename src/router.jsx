@@ -1,6 +1,6 @@
 import Welcome from "./views/Welcome";
 import Login from "./components/Login";
-import Register2 from "./components/Register2";
+import Register from "./components/Register2";
 import Home from "./views/Dashboard/Browser/Home";
 import Friends from "./views/Dashboard/Browser/Friends";
 import Group from "./views/Dashboard/Browser/Group";
@@ -23,7 +23,7 @@ const routes = [
       },
       {
         path: "/register",
-        element: <Register2 />,
+        element: <Register />,
       },
     ],
   },
