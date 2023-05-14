@@ -1,65 +1,59 @@
 #earth {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: transparent;
-    margin: 0;
-    position: absolute;
-    z-index: 10; 
-    left: 0; 
-  }
-  
-  
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  margin: 0;
+  position: absolute;
+  z-index: 10;
+  left: 0;
+}
+
+#welcome-left {
+  width: 70%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+}
+
+#welcome-right {
+  width: 30%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+}
+
+/* <--- Responsive ---> */
+
+@media screen and (max-width: 991px) {
   #welcome-left {
-    width: 70%;
+    width: 50%;
     height: 100%;
     position: absolute;
     left: 0;
   }
 
   #welcome-right {
-    width: 30%;
+    width: 50%;
     height: 100%;
     position: absolute;
     right: 0;
   }
- 
-  
-  
-  
-  
-  
-  /* <--- Responsive ---> */
-  
-  @media screen and (max-width: 991px) {
-    #welcome-left {
-      width: 50%;
-      height: 100%;
-      position: absolute;
-      left: 0;
-    }
-  
-    #welcome-right {
-      width: 50%;
-      height: 100%;
-      position: absolute;
-      right: 0;
-    }
+}
+
+@media screen and (max-width: 575px) {
+  #welcome-left {
+    height: 25%;
+    width: 100%;
+    top: 0;
+    position: absolute;
   }
-  
-  @media screen and (max-width: 575px) {
-    #welcome-left {
-      height: 25%;
-      width: 100%;
-      top: 0;
-      position: absolute;
-    }
-    #welcome-right {
-      height: 75%;
-      width: 100%;
-      bottom: 0;
-      position: absolute;
-    }
+  #welcome-right {
+    height: 75%;
+    width: 100%;
+    bottom: 0;
+    position: absolute;
   }
+}
