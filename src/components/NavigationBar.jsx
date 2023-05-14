@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "../styles/navigationbar.css";
 import {
   ChakraProvider,
@@ -9,15 +9,101 @@ import {
   MenuItem,
   useMediaQuery,
   Text,
+  useToast,
+  useDisclosure,
 } from "@chakra-ui/react";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link, useNavigate } from "react-router-dom";
 import kd from "../assets/avatar/kd.png";
 import bell from "../assets/bell.png";
+import http from "../lib/http";
 
 const NavigationBar = () => {
+  const navigate = useNavigate();
+  const toast = useToast();
+  const { isOpen, onOpen, onClose } = useDisclosure();
   const [searchTerm, setSearchTerm] = useState("");
+  const [modalTitle, setModalTitle] = useState("");
+  const [selectedFr, setSelectedFr] = useState();
+  const [fr, setFr] = useState([]);
   const user = useRef(JSON.parse(localStorage.getItem("user")));
-  console.log(user.current.profile_picture);
+
+  async function submit(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    if (!searchTerm) {
+      return;
+    }
+    navigate(`/search/${searchTerm}`);
+    navigate(0);
+  }
+
+  async function getFrs() {
+    const res = await http.get("/friend-requests", {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
+      },
+    });
+    setFr(res.data.data);
+  }
+
+  function openModal(fr) {
+    setModalTitle(fr.user);
+    setSelectedFr(fr);
+    onOpen();
+  }
+
+  async function logout() {
+    await http.post(
+      "/logout",
+      {},
+      {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      }
+    );
+    localStorage.clear();
+    navigate("/login");
+  }
+
+  async function respond(response) {
+    const body = {
+      response: response,
+    };
+    const res = await http.put(`/friend-requests/${selectedFr.id}`, body, {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
+      },
+    });
+    onClose();
+    if (res.status === 200) {
+      if (response) {
+        toast({
+          title: "Friend request accepted",
+          description: "You are now friends!",
+          status: "success",
+          duration: 5000,
+          isClosable: true,
+        });
+      } else {
+        toast({
+          title: "Friend request denied",
+          description: "Boohoo no frens",
+          status: "success",
+          duration: 5000,
+          isClosable: true,
+        });
+      }
+      getFrs();
+    }
+  }
+
+  useEffect(() => {
+    getFrs();
+    return;
+  }, []);
 
   return (
     <ChakraProvider>
@@ -126,9 +212,9 @@ const NavigationBar = () => {
                 <Avatar
                   className="avatar-profile border-2"
                   size={{ base: "xs", md: "md" }}
-                  src={
-                    "${import.meta.env.VITE_API}/images/${user.current.profile_picture}"
-                  }
+                  src={`${import.meta.env.VITE_API}/image/${
+                    user.current.profile_picture
+                  }`}
                 />
               </MenuButton>
               <MenuList>

@@ -71,7 +71,7 @@ const Register = () => {
         birthdate: birthDate,
         profile_picture: imageName,
         email,
-        password: password,
+        password,
         password_confirmation: passwordConfirmation,
       };
       const res = await http.post("/register", body);
