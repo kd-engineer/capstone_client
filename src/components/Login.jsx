@@ -20,6 +20,7 @@ const Login = () => {
     password: "",
   };
 
+  const navigate = useNavigate();
   const [formState, setFormState] = useState(initialForm);
   const { email, password } = formState;
 
