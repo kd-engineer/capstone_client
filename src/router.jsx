@@ -57,10 +57,10 @@ const routes = [
           },
         ],
       },
-      {
-        path: "/group",
-        element: <Group />,
-      },
+      //{
+      //  path: "/group",
+      //  element: <Group />,
+      // },
       {
         path: "/profile",
         element: <Profile />,

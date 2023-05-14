@@ -11,6 +11,7 @@ import {
   Text,
   useToast,
   useDisclosure,
+  MenuGroup,
 } from "@chakra-ui/react";
 import { NavLink, Link, useNavigate } from "react-router-dom";
 import kd from "../assets/avatar/kd.png";
@@ -144,7 +145,7 @@ const NavigationBar = () => {
                     </span>
                   </div>
                 </NavLink>
-                <NavLink className={"nav-link"} to={"/group"}>
+                {/*<NavLink className={"nav-link"} to={"/group"}>
                   Group
                   <div>
                     <span className="link-space">
@@ -152,7 +153,7 @@ const NavigationBar = () => {
                       <span className="back">Group</span>
                     </span>
                   </div>
-                </NavLink>
+  </NavLink>*/}
               </li>
               <li className="device-nav">
                 <NavLink className={"nav-link"} to={"/"}>
@@ -173,7 +174,7 @@ const NavigationBar = () => {
                     Friends
                   </Text>
                 </NavLink>
-                <NavLink className={"nav-link"} to={"/group"}>
+                {/*} <NavLink className={"nav-link"} to={"/group"}>
                   <Text
                     w="100%"
                     className="absolute"
@@ -181,7 +182,7 @@ const NavigationBar = () => {
                   >
                     Group
                   </Text>
-                </NavLink>
+</NavLink>*/}
               </li>
             </nav>
           </div>
@@ -211,6 +212,11 @@ const NavigationBar = () => {
           <div id="profile-menu">
             <Menu>
               <MenuButton>
+                {/*} <Avatar
+                  className="avatar-profile border-2"
+                  size={{ base: "xs", md: "md" }}
+                  src={kd}
+                />*/}
                 <Avatar
                   className="avatar-profile border-2"
                   size={{ base: "xs", md: "md" }}

@@ -86,7 +86,7 @@ const Search = () => {
                     key={index}
                     borderTopLeftRadius={20}
                     borderBottomRightRadius={20}
-                    h={"300px"}
+                    minH={"300px"}
                     w={"200px"}
                     className="t-scale truncate"
                   >
@@ -106,15 +106,17 @@ const Search = () => {
                       <Text className="font-bold text-center items-center mb-3 ml-0 py-1">
                         <b>{user.name}</b>
                       </Text>
-                      <Button
-                        colorScheme="blue"
-                        size="sm"
-                        className="text-white"
-                        aria-label="Search database"
-                        onClick={() => addUser(user)}
-                      >
-                        Add Friend
-                      </Button>
+                      {loggedIn.current.id !== user.id && (
+                        <Button
+                          colorScheme="blue"
+                          size="sm"
+                          className="text-white"
+                          aria-label="Search database"
+                          onClick={() => addUser(user)}
+                        >
+                          Add Friend
+                        </Button>
+                      )}
                     </Box>
                   </Box>
                 );
