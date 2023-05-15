@@ -25,7 +25,7 @@ const Friends = () => {
                   Friend Requests
                 </div>
               </NavLink>
-              <NavLink to={"/friends/birthdays"}>
+              {/*} <NavLink to={"/friends/birthdays"}>
                 <div className="p-2 text-xl text-center text-white font-bold cursor-pointer rounded-lg">
                   Birthdays
                 </div>
@@ -34,7 +34,7 @@ const Friends = () => {
                 <div className="p-2 text-xl text-center text-white font-bold cursor-pointer rounded-lg">
                   Custom List
                 </div>
-              </NavLink>
+  </NavLink>*/}
             </div>
           </div>
           <div id="friends-content">

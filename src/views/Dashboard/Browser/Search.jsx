@@ -16,6 +16,7 @@ import {
 import { useParams } from "react-router-dom";
 import { AddIcon } from "@chakra-ui/icons";
 import http from "../../../lib/http";
+import FallBackSrc from "../../../assets/add-user.jpg";
 
 const Search = () => {
   const { searchTerm } = useParams();
@@ -93,7 +94,7 @@ const Search = () => {
                     <Image
                       h={"200px"}
                       objectFit="cover"
-                      fallbackSrc="https://via.placeholder.com/150"
+                      fallbackSrc={FallBackSrc}
                       src={`${import.meta.env.VITE_API}/image/${
                         user.profile_picture
                       }`}
@@ -106,17 +107,26 @@ const Search = () => {
                       <Text className="font-bold text-center items-center mb-3 ml-0 py-1">
                         <b>{user.name}</b>
                       </Text>
-                      {loggedIn.current.id !== user.id && (
+                      <ButtonGroup className="justify-center">
                         <Button
                           colorScheme="blue"
                           size="sm"
                           className="text-white"
-                          aria-label="Search database"
-                          onClick={() => addUser(user)}
                         >
-                          Add Friend
+                          View Profile
                         </Button>
-                      )}
+                        {loggedIn.current.id !== user.id && (
+                          <Button
+                            colorScheme="blue"
+                            size="sm"
+                            className="text-white"
+                            aria-label="Search database"
+                            onClick={() => addUser(user)}
+                          >
+                            Add Friend
+                          </Button>
+                        )}
+                      </ButtonGroup>
                     </Box>
                   </Box>
                 );

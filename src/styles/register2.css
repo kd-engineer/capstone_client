@@ -207,3 +207,15 @@ input::file-selector-button {
 .text-DP {
   color: rgba(65, 13, 29, 0.85);
 }
+
+.css-x9juev {
+  gap: 10px;
+}
+
+/*   <--- Responsive --->   */
+
+@media only screen and (max-width: 1496px) {
+  #register h1 {
+    padding: 5px;
+  }
+}

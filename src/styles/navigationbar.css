@@ -250,7 +250,6 @@ li a.active .back {
     flex-direction: row;
     position: absolute;
     color: #fff;
-    font-size: small;
   }
   nav {
     top: 0;
@@ -283,7 +282,6 @@ li a.active .back {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: small;
   }
   #profile-container {
     width: 200px;
@@ -382,7 +380,7 @@ li a.active .back {
   }
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 800px) {
   #navigationbar {
     width: 100%;
     height: 40px;
@@ -501,7 +499,7 @@ li a.active .back {
   }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 768px) {
   #navigationbar {
     width: 100%;
     height: 30px;
@@ -617,5 +615,9 @@ li a.active .back {
     margin-right: 10px;
     margin-top: 5px;
     position: absolute;
+  }
+  #breadcrumb {
+    visibility: visible;
+    font-size: 10px;
   }
 }

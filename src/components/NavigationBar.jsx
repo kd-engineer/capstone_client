@@ -12,11 +12,15 @@ import {
   useToast,
   useDisclosure,
   MenuGroup,
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
 } from "@chakra-ui/react";
 import { NavLink, Link, useNavigate } from "react-router-dom";
 import kd from "../assets/avatar/kd.png";
 import bell from "../assets/bell.png";
 import http from "../lib/http";
+import fallBackSrc from "../assets/add-user.jpg";
 
 const NavigationBar = () => {
   const navigate = useNavigate();
@@ -65,7 +69,7 @@ const NavigationBar = () => {
       }
     );
     localStorage.clear();
-    navigate("/login");
+    navigate("/welcome/login");
   }
 
   async function respond(response) {
@@ -110,7 +114,7 @@ const NavigationBar = () => {
     <ChakraProvider>
       <div id="navigationbar">
         <div id="brand-logo" className="pl-3">
-          <Link to={"/"}>BRAND NAME</Link>
+          <Link to={"/"}>SHURIKEN</Link>
         </div>
         <div id="navbar">
           <div id="search-bar">
@@ -160,7 +164,7 @@ const NavigationBar = () => {
                   <Text
                     w="100%"
                     className="absolute"
-                    fontSize={{ base: "10px" }}
+                    fontSize={{ base: "10px", md: "14px" }}
                   >
                     Home
                   </Text>
@@ -169,11 +173,21 @@ const NavigationBar = () => {
                   <Text
                     w="100%"
                     className="absolute"
-                    fontSize={{ base: "10px" }}
+                    fontSize={{ base: "10px", md: "14px" }}
                   >
                     Friends
                   </Text>
                 </NavLink>
+                <div id="breadcrumb">
+                  <Breadcrumb className="mt-5 ml-2">
+                    <BreadcrumbItem>
+                      <Link to={"/friends/allfriends"}>All Friends</Link>
+                    </BreadcrumbItem>
+                    <BreadcrumbItem>
+                      <Link to={"/friends/friendrequest"}>Friend Request</Link>
+                    </BreadcrumbItem>
+                  </Breadcrumb>
+                </div>
                 {/*} <NavLink className={"nav-link"} to={"/group"}>
                   <Text
                     w="100%"
@@ -190,7 +204,7 @@ const NavigationBar = () => {
         <div id="profile-nav" className="text-center"></div>
 
         <div id="profile-container" className="flex flex-row justify-end pl-3">
-          <div
+          {/*<div
             id="notification"
             className="absolute right-12 bg-gray-700 rounded-full border-2 border-black"
           >
@@ -208,31 +222,29 @@ const NavigationBar = () => {
                 <MenuItem>You have 2 friend requests</MenuItem>
               </MenuList>
             </Menu>
-          </div>
+</div>*/}
+
           <div id="profile-menu">
             <Menu>
               <MenuButton>
-                {/*} <Avatar
+                <Avatar
                   className="avatar-profile border-2"
                   size={{ base: "xs", md: "md" }}
                   src={kd}
-                />*/}
-                <Avatar
+                />
+                {/*<Avatar
                   className="avatar-profile border-2"
                   size={{ base: "xs", md: "md" }}
                   src={`${import.meta.env.VITE_API}/image/${
                     user.current.profile_picture
                   }`}
-                />
+                />*/}
               </MenuButton>
               <MenuList>
-                <Link to={"/profile"}>
-                  <MenuItem>Profile</MenuItem>
-                </Link>
-                <MenuItem>Theme</MenuItem>
-                <Link to={"/welcome/login"}>
-                  <MenuItem>Sign out</MenuItem>
-                </Link>
+                <MenuItem onClick={() => navigate("/profile")}>
+                  Profile
+                </MenuItem>
+                <MenuItem onClick={logout}>Sign out</MenuItem>
               </MenuList>
             </Menu>
           </div>

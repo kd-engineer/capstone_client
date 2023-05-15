@@ -1,6 +1,6 @@
 import Welcome from "./views/Welcome";
-import Login from "./components/Login";
-import Register from "./components/Register2";
+import Login from "./components/Login1";
+import Register from "./components/Register3";
 import Home from "./views/Dashboard/Browser/Home";
 import Friends from "./views/Dashboard/Browser/Friends";
 import Group from "./views/Dashboard/Browser/Group";
@@ -47,20 +47,20 @@ const routes = [
             path: "/friendrequest",
             element: <FriendRequest />,
           },
-          {
-            path: "/birthdays",
-            element: <Birthdays />,
-          },
-          {
-            path: "/customlist",
-            element: <CustomList />,
-          },
+          //  {
+          //    path: "/birthdays",
+          //    element: <Birthdays />,
+          //   },
+          //  {
+          //    path: "/customlist",
+          //    element: <CustomList />,
+          //  },
         ],
       },
-      //{
-      //  path: "/group",
-      //  element: <Group />,
-      // },
+      {
+        path: "/group",
+        element: <Group />,
+      },
       {
         path: "/profile",
         element: <Profile />,

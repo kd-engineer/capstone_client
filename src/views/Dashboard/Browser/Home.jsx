@@ -231,14 +231,14 @@ const Home = () => {
                     borderLeftRadius={50}
                     className="bg-gray-800 p-2 pr-3 pl-3 flex flex-row justify-center items-center"
                   >
-                    {/*<Avatar className="border-2" size="md" src={kd} />*/}
-                    <Avatar
+                    <Avatar className="border-2" size="md" src={kd} />
+                    {/*<Avatar
                       className="border-2"
                       size="md"
                       src={`${import.meta.env.VITE_API}/image/${
                         user.current.profile_picture
                       }`}
-                    />
+                    />*/}
 
                     <Input
                       borderLeftRadius={50}
@@ -271,7 +271,7 @@ const Home = () => {
                 </Card>
               </form>
 
-              <Flex flexDirection="column" alignItems="center">
+              {/*}  <Flex flexDirection="column" alignItems="center">
                 {posts.map((post, index) => {
                   return (
                     <Card key={index} w="500px" mb="4">
@@ -424,9 +424,9 @@ const Home = () => {
                     </Card>
                   );
                 })}
-              </Flex>
+              </Flex>*/}
 
-              {/*} <Card>
+              <Card borderRadius={50}>
                 <div className="flex flex-row bg-gray-600 p-2 rounded-t-lg">
                   <Avatar size="sm" src={kd} />
                   <div>
@@ -445,19 +445,19 @@ const Home = () => {
                   </Text>
                 </div>
                 <Image src={kd}></Image>
-                <div className="flex flex-row justify-center h-8 gap-20 bg-white">
-                  <div className="flex flex-row cursor-pointer mt-1">
+                <div className="flex flex-row justify-center h-12 gap-10 bg-gray-200">
+                  <Button className="flex flex-row cursor-pointer mt-1">
                     <Icon className="mt-1" as={BiLike} />
                     <Text className="ml-2">Like</Text>
-                  </div>
-                  <div className="flex flex-row cursor-pointer mt-1">
+                  </Button>
+                  <Button className="flex flex-row cursor-pointer mt-1">
                     <Icon className="mt-1" as={BiLike} />
                     <Text className="ml-2">Comment</Text>
-                  </div>
-                  <div className="flex flex-row cursor-pointer mt-1">
+                  </Button>
+                  <Button className="flex flex-row cursor-pointer mt-1">
                     <Icon className="mt-1" as={BiLike} />
                     <Text className="ml-2">Share</Text>
-                  </div>
+                  </Button>
                 </div>
                 <CardFooter
                   borderBottomRadius={10}
@@ -468,7 +468,69 @@ const Home = () => {
                     <Avatar size="sm" src={russel} />
                     <div className="flex flex-col w-full">
                       <Text className="bg-gray-600 font-bold text-sm ml-2 w-full p-1 rounded-t-lg">
-                        Russel
+                        Russel King Cadiang
+                      </Text>
+                      <Text className="bg-gray-600 ml-2 w-full p-1 rounded-b-lg">
+                        Oh!
+                      </Text>
+                    </div>
+                  </div>
+                  <div className="flex flex-row gap-5 ml-14">
+                    <Text>Like</Text>
+                    <Text>Reply</Text>
+                  </div>
+                  <div className="flex flex-row mt-1">
+                    <Avatar size="md" src={kd} />
+                    <Input
+                      borderRadius={50}
+                      className="ml-2 bg-gray-700 mt-1 h-4"
+                      type="text"
+                      placeholder="Write a comment"
+                    />
+                  </div>
+                </CardFooter>
+              </Card>
+              <Card>
+                <CardHeader
+                  borderTopRadius="10"
+                  className="flex flex-row bg-gray-600"
+                >
+                  <Avatar size="md" src={lance} />
+                  <div>
+                    <Text className="ml-2 font-bold">Lancer Dayap</Text>
+                    <Text className="ml-2">
+                      1m
+                      <Icon className="ml-1 mb-1" as={MdPublic} />
+                    </Text>
+                  </div>
+                </CardHeader>
+                <CardBody className="bg-gray-600">
+                  <Text className="bg-gray-600 -mt-6">Draft pa lang ito</Text>
+                </CardBody>
+                <div className="flex flex-row justify-center h-12 gap-10 bg-gray-200">
+                  <Button className="flex flex-row cursor-pointer mt-1">
+                    <Icon className="mt-1" as={BiLike} />
+                    <Text className="ml-2">Like</Text>
+                  </Button>
+                  <Button className="flex flex-row cursor-pointer mt-1">
+                    <Icon className="mt-1" as={BiLike} />
+                    <Text className="ml-2">Comment</Text>
+                  </Button>
+                  <Button className="flex flex-row cursor-pointer mt-1">
+                    <Icon className="mt-1" as={BiLike} />
+                    <Text className="ml-2">Share</Text>
+                  </Button>
+                </div>
+                <CardFooter
+                  borderBottomRadius={10}
+                  className="bg-gray-700 flex flex-col"
+                >
+                  <Text>View more comments</Text>
+                  <div className="flex flex-row mt-2">
+                    <Avatar size="sm" src={russel} />
+                    <div className="flex flex-col w-full">
+                      <Text className="bg-gray-600 font-bold text-sm ml-2 w-full p-1 rounded-t-lg">
+                        Russel King Cadiang
                       </Text>
                       <Text className="bg-gray-600 ml-2 w-full p-1 rounded-b-lg">
                         Okay!
@@ -495,9 +557,9 @@ const Home = () => {
                   borderTopRadius="10"
                   className="flex flex-row bg-gray-600"
                 >
-                  <Avatar size="md" src={lance} />
+                  <Avatar size="md" src={russel} />
                   <div>
-                    <Text className="ml-2 font-bold">Lance</Text>
+                    <Text className="ml-2 font-bold">Russel King Cadiang</Text>
                     <Text className="ml-2">
                       1m
                       <Icon className="ml-1 mb-1" as={MdPublic} />
@@ -505,21 +567,21 @@ const Home = () => {
                   </div>
                 </CardHeader>
                 <CardBody className="bg-gray-600">
-                  <Text className="bg-gray-600 -mt-6">Draft pa lang ito</Text>
+                  <Text className="bg-gray-600 -mt-6">Good Morning!</Text>
                 </CardBody>
-                <div className="flex flex-row justify-center h-8 gap-20 bg-white">
-                  <div className="flex flex-row cursor-pointer mt-1">
+                <div className="flex flex-row justify-center h-12 gap-10 bg-gray-200">
+                  <Button className="flex flex-row cursor-pointer mt-1">
                     <Icon className="mt-1" as={BiLike} />
                     <Text className="ml-2">Like</Text>
-                  </div>
-                  <div className="flex flex-row cursor-pointer mt-1">
+                  </Button>
+                  <Button className="flex flex-row cursor-pointer mt-1">
                     <Icon className="mt-1" as={BiLike} />
                     <Text className="ml-2">Comment</Text>
-                  </div>
-                  <div className="flex flex-row cursor-pointer mt-1">
+                  </Button>
+                  <Button className="flex flex-row cursor-pointer mt-1">
                     <Icon className="mt-1" as={BiLike} />
                     <Text className="ml-2">Share</Text>
-                  </div>
+                  </Button>
                 </div>
                 <CardFooter
                   borderBottomRadius={10}
@@ -527,13 +589,13 @@ const Home = () => {
                 >
                   <Text>View more comments</Text>
                   <div className="flex flex-row mt-2">
-                    <Avatar size="sm" src={russel} />
+                    <Avatar size="sm" src={lance} />
                     <div className="flex flex-col w-full">
                       <Text className="bg-gray-600 font-bold text-sm ml-2 w-full p-1 rounded-t-lg">
-                        Russel
+                        Lancer Dayap
                       </Text>
                       <Text className="bg-gray-600 ml-2 w-full p-1 rounded-b-lg">
-                        Okay!
+                        Good Morning!
                       </Text>
                     </div>
                   </div>
@@ -552,68 +614,6 @@ const Home = () => {
                   </div>
                 </CardFooter>
               </Card>
-              <Card>
-                <CardHeader
-                  borderTopRadius="10"
-                  className="flex flex-row bg-gray-600"
-                >
-                  <Avatar size="md" src={lance} />
-                  <div>
-                    <Text className="ml-2 font-bold">Lance</Text>
-                    <Text className="ml-2">
-                      1m
-                      <Icon className="ml-1 mb-1" as={MdPublic} />
-                    </Text>
-                  </div>
-                </CardHeader>
-                <CardBody className="bg-gray-600">
-                  <Text className="bg-gray-600 -mt-6">Draft pa lang ito</Text>
-                </CardBody>
-                <div className="flex flex-row justify-center h-8 gap-20 bg-white">
-                  <div className="flex flex-row cursor-pointer mt-1">
-                    <Icon className="mt-1" as={BiLike} />
-                    <Text className="ml-2">Like</Text>
-                  </div>
-                  <div className="flex flex-row cursor-pointer mt-1">
-                    <Icon className="mt-1" as={BiLike} />
-                    <Text className="ml-2">Comment</Text>
-                  </div>
-                  <div className="flex flex-row cursor-pointer mt-1">
-                    <Icon className="mt-1" as={BiLike} />
-                    <Text className="ml-2">Share</Text>
-                  </div>
-                </div>
-                <CardFooter
-                  borderBottomRadius={10}
-                  className="bg-gray-700 flex flex-col"
-                >
-                  <Text>View more comments</Text>
-                  <div className="flex flex-row mt-2">
-                    <Avatar size="sm" src={russel} />
-                    <div className="flex flex-col w-full">
-                      <Text className="bg-gray-600 font-bold text-sm ml-2 w-full p-1 rounded-t-lg">
-                        Russel
-                      </Text>
-                      <Text className="bg-gray-600 ml-2 w-full p-1 rounded-b-lg">
-                        Okay!
-                      </Text>
-                    </div>
-                  </div>
-                  <div className="flex flex-row gap-5 ml-14">
-                    <Text>Like</Text>
-                    <Text>Reply</Text>
-                  </div>
-                  <div className="flex flex-row mt-1">
-                    <Avatar size="md" src={kd} />
-                    <Input
-                      borderRadius={50}
-                      className="ml-2 bg-gray-700 mt-1 h-4"
-                      type="text"
-                      placeholder="Write a comment"
-                    />
-                  </div>
-                </CardFooter>
-              </Card>*/}
             </div>
           </div>
 
